@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="assets/css/style.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <header id="hero">
+         <div class="container header-wrapper">
+            <div class="logo">
+               <a href="#"><img src="assets/images/logo.png" alt="Logo" /></a>
+            </div>
+            <nav class="main-menu">
+               <ul>
+                  <li class="active"><a href="#">ABOUT US</a></li>
+                  <li><a href="#">PROJECTS</a></li>
+                  <li><a href="#">NEWS</a></li>
+                  <li><a href="#">CONTACT</a></li>
+               </ul>
+            </nav>
+            <ul class="social-icons">
+               <li><a href="#"><img src="assets/images/fb.png" alt="FB" /></a></li>
+               <li><a href="#"><img src="assets/images/x.png" alt="X" /></a></li>
+               <li><a href="#"><img src="assets/images/insta.png" alt="Insta" /></a></li>
+            </ul>
+         </div>
+         <div class="hero-content">
+            <h1>SIMPLE & MODERN</h1>
+            <h3>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h3>
+         </div>
+         <div class="slider-navigation">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+         </div>
+         <div class="scroll-down">
+            <i class="fas fa-chevron-down"> <img src="assets/images/arrow.png"> </img></i>
+         </div>
+      </header>
+      <main>
+         <section class="container projects">
+            <div class="divider"></div>
+            <h2>WHAT WE DO</h2>
+            <div class="projects-container"></div>
+         </section>
+         <section class="latest-news">
+            <div class="divider"></div>
+            <h2>LATEST NEWS</h2>
+            <div class="news-slider"></div>
+            <button class="prev-btn"><img src="assets/images/left.png" alt="Previous"></button>
+            <button class="next-btn"><img src="assets/images/right.png" alt="Next"></button>
+            <div class="news-dots">
+               <span class="dot" data-news="0"></span>
+               <span class="dot" data-news="1"></span>
+               <span class="dot" data-news="2"></span>
+            </div>
+         </section>
+         <section class="gallery-section">
+            <div class="divider"></div>
+            <h2>GALLERY</h2>
+            <div class="gallery-container">
+               <div class="gallery-grid"></div>
+            </div>
+            <button class="see-more-btn">SEE MORE</button>
+            <div class="image-modal">
+               <span class="close-modal">&times;</span>
+               <img class="modal-content" id="fullImage">
+            </div>
+         </section>
+         <section class="contact-section">
+            <div class="map-container">
+               <div id="map"></div>
+            </div>
+            <div class="contact-form">
+               <h2>GET IN TOUCH</h2>
+               <div class="content-form">
+                  <div class="content">
+                     <p>91 Nolan Extensions Suite 670</p>
+                     <p>+001 356-868-2454</p>
+                     <p>montichello@service.com</p>
+                     <p>From 07:05AM to 19:30PM</p>
+                  </div>
+                  <form id="my_form"  onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;" method="POST">
+                     <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                     </div>
+                     <button type="submit" class="submit-btn">SUBMIT</button>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <div class="container footer-content">
+            <div class="footer-logo">
+               <a href="#"><img src="assets/images/logo.png" alt="Monticello Logo"></a>
+            </div>
+            <ul class="footer-social-icons">
+               <li><a href="#"><img src="assets/images/fb.png" alt="Facebook"></a></li>
+               <li><a href="#"><img src="assets/images/x.png" alt="Twitter"></a></li>
+               <li><a href="#"><img src="assets/images/insta.png" alt="Instagram"></a></li>
+            </ul>
+         </div>
+         <div class="footer-bottom">
+            <p>Copyright © 2024 Monticello. All rights reserved.</p>
+         </div>
+      </footer>
+      <script src="assets/js/script.js"></script>
+   </body>
+</html>
